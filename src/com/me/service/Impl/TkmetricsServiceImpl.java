@@ -10,6 +10,7 @@ import com.me.service.TkmetricsService;
 import java.util.List;
 
 public class TkmetricsServiceImpl implements TkmetricsService {
+    private final int LIMIT=10;
     private TkRepository tkRepository = new TkRepositoryImpl();
     @Override
     public List<Tkmetrics> findAllTk(Integer sno, Integer cno) {
@@ -20,4 +21,11 @@ public class TkmetricsServiceImpl implements TkmetricsService {
     public void handleTk(Integer state, Integer tno) {
         tkRepository.handle(state,tno);
     }
+
+    @Override
+    public void insert(Integer cno, Integer sno, Integer lno) {
+      tkRepository.insert(cno, sno, lno);
+    }
+
+    //获取页数
 }

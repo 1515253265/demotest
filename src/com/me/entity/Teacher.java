@@ -7,15 +7,26 @@ public class Teacher {
     private String username;
     private String password;
 
-    public Teacher(Integer lno, String lname, String username, String password) {
+    public Teacher(Integer lno, String lname, String username,String password) {
         this.lno = lno;
         this.lname = lname;
         this.username = username;
         this.password = password;
     }
 
+    public Teacher(Integer lno, String lname, String username) {
+        this.lno = lno;
+        this.lname = lname;
+        this.username = username;
+    }
+
     public Teacher(String lname) {
         this.lname = lname;
+    }
+
+    public Teacher(String lname, String username) {
+        this.lname = lname;
+        this.username = username;
     }
 
     public Course getCourse() {

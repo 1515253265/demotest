@@ -7,5 +7,7 @@ import java.util.List;
 
 public interface CourseService {
     public List<Course> findAll(String username);
-    public List<Tkmetrics> findAllByTeacher(String username);
+    public List<Tkmetrics> findAllByTeacher(String username,Integer page);
+    public int getTeacherPages(String username);
+    public List<Course> findAllByLno(Integer lno);
 }

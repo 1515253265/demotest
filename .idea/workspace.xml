@@ -17,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -44,6 +44,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/js" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/utils" />
@@ -172,6 +173,17 @@
       <workItem from="1590395281995" duration="13435000" />
       <workItem from="1590455143313" duration="14158000" />
       <workItem from="1590890421262" duration="11219000" />
+      <workItem from="1591002303925" duration="245000" />
+      <workItem from="1591260404435" duration="6781000" />
+      <workItem from="1591408840869" duration="5559000" />
+      <workItem from="1591513552735" duration="8331000" />
+      <workItem from="1591585070703" duration="261000" />
+      <workItem from="1591603204554" duration="8926000" />
+      <workItem from="1591669635552" duration="4535000" />
+      <workItem from="1592012838721" duration="6854000" />
+      <workItem from="1592027134421" duration="10669000" />
+      <workItem from="1592039531710" duration="7417000" />
+      <workItem from="1592101643587" duration="4710000" />
     </task>
     <servers />
   </component>

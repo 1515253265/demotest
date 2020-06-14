@@ -14,28 +14,31 @@
 
 <html>
   <head>
-    <title>$Title$</title>
+    <title>课程信息</title>
   </head>
+  <%@ include file="top.jsp"%>
   <br>
 
   欢迎:   ${student.name}
   <a href="/logout">注销</a>
-  <br>
-<table cellpadding="0" class="table">
+  <div align="center"> <br>
+<table  cellpadding="0" class="table">
   <tr>
-    <td>课程名</td>
-      <td>任课老师</td>
-      <td>查看记录</td>
+      <td>课程名  &nbsp; </td>
+      <td>任课老师  &nbsp; </td>
+      <td>查看记录  &nbsp; </td>
   </tr>
   <c:forEach items="${list}" var="course">
     <tr>
       <td>${course.cname}</td>
         <td>${course.teacher.lname}</td>
         <td>
-          <a href="/TK?method=findAllTk&cno=${course.cno}&sno=${course.student.sno}">进入</a>
+          <a href="/TK?method=findAllTk&cno=${course.cno}&sno=${course.student.sno}&page=1">进入</a>
         </td>
     </tr>
   </c:forEach>
 </table>
+  </div>
+  <%@include file="footer.jsp"%>
   </body>
 </html>

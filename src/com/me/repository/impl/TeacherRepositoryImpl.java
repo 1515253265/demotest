@@ -2,13 +2,16 @@ package com.me.repository.impl;
 
 import com.me.entity.Student;
 import com.me.entity.Teacher;
+import com.me.entity.Tkmetrics;
 import com.me.repository.TeacherRepository;
+import com.mysql.cj.jdbc.JdbcConnection;
 import utils.JDBCTools;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 public class TeacherRepositoryImpl implements TeacherRepository {
     @Override
@@ -34,6 +37,41 @@ public class TeacherRepositoryImpl implements TeacherRepository {
             JDBCTools.release(connection,statement,resultSet);//释放
         }
         return teacher;
+
+    }
+
+    @Override
+    public void updateByTno(Integer tno,Integer state) {
+        Connection connection = JDBCTools.getConnection();
+        String sql = "update tkmetrics set state = ? where tno = ?";
+        PreparedStatement statement = null;
+        try{
+            statement = connection.prepareStatement(sql);
+            statement.setInt(1,state);
+            statement.setInt(2,tno);
+            statement.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            JDBCTools.release(connection,statement,null);
+        }
+
+    }
+
+    @Override
+    public void deleteByTno(Integer tno) {
+        Connection connection = JDBCTools.getConnection();
+        String sql="delete from tkmetrics where tno = ?";
+        PreparedStatement statement = null;
+        try{
+            statement = connection.prepareStatement(sql);
+            statement.setInt(1,tno);
+            statement.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            JDBCTools.release(connection,statement,null);
+        }
 
     }
 }

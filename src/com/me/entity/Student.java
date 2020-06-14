@@ -1,15 +1,28 @@
 package com.me.entity;
 
 public class Student {
-    private Integer sno;//学号
+    private Integer sno;//学号s
     private String name;//姓名
     private String age;//年龄
     private String sex;//性别
+    private String scar;//班级
     private String grade;//年级
     private String dept;//系别
     private String username;//登录名
     private String password;//密码
 
+    public Student(Integer sno, String name, String scar, String grade) {
+        this.sno = sno;
+        this.name = name;
+        this.scar = scar;
+        this.grade = grade;
+    }
+
+    public Student(Integer sno, String username, String password) {
+        this.sno = sno;
+        this.username = username;
+        this.password = password;
+    }
     public Student(Integer sno, String name) {
         this.sno = sno;
         this.name = name;
@@ -24,6 +37,14 @@ public class Student {
         this.dept = dept;
         this.username = username;
         this.password = password;
+    }
+
+    public String getScar() {
+        return scar;
+    }
+
+    public void setScar(String scar) {
+        this.scar = scar;
     }
 
     public Student(Integer sno) {

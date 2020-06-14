@@ -9,8 +9,15 @@
 <html>
 <head>
     <title>Title</title>
+<style>
+    body{
+        background: azure;
+    }
+</style>
 </head>
 <body>
+<%@ include file="top.jsp"%>
+<div align="center">
 <form action="/login" method="post">
     <table border="0">
         <tr>
@@ -40,6 +47,8 @@
         </tr>
     </table>
 </form>
+</div>
 
+<%@ include file="footer.jsp"%>
 </body>
 </html>

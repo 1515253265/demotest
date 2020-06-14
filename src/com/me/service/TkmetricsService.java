@@ -7,4 +7,5 @@ import java.util.List;
 public interface TkmetricsService {
     public List<Tkmetrics> findAllTk(Integer sno,Integer cno);
     public void handleTk(Integer state,Integer tno);
+    public void insert(Integer cno,Integer sno ,Integer lno);
 }

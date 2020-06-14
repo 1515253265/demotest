@@ -50,14 +50,10 @@ public class LoginServlet extends HttpServlet {
                 case "teacher":
                     Teacher teacher = (Teacher) object;
                     session.setAttribute("teacher", teacher);
-                    List<Tkmetrics> list1 = courseService.findAllByTeacher(username);
-                    request.setAttribute("list",list1);
-                    //跳转到管理员首页
-                    request.getRequestDispatcher("teacher.jsp").forward(request,response);
+                    response.sendRedirect("/teacher?method=findAll&username="+username+"&page=1");
                     break;
             }
         } else {
-            System.out.println("这里啊");
             response.sendRedirect("login.jsp");
         }
     }
